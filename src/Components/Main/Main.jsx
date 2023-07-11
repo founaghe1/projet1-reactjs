@@ -88,6 +88,9 @@ import './main.css'
 
 // ]
 
+
+// 57 minutes
+
 const Main =() =>{
     return(
         <section className="main container section">
