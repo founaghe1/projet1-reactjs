@@ -18,9 +18,13 @@
     --textColor: hsl(240, 4%, 36%);
     --whiteColorDream: hsl(0, 0%, 93%);
     --greyText: rgb(190, 190, 190);
-    --inputColr: rgb(139, 239, 239);
+    --inputColr: rgba(139, 239, 239, 0.28);
     --bodyColor: rgb(240, 240, 249);
     --cardBG: rgb(255, 255, 255);
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 a{
@@ -72,4 +76,24 @@ input{
 }
 body{
     background: var(--bodyColor);
+}
+
+
+
+
+@media screen and (min-width: 1240px) {
+    .container{
+        width: 80% !important;
+        margin: auto ;
+    }
+
+    .section{
+        padding: 6rem 0 4rem;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    body{
+        zoom: 1.7;
+    }
 }

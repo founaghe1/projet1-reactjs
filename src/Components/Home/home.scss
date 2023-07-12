@@ -7,7 +7,7 @@
     --textColor: hsl(240, 4%, 36%);
     --whiteColorDream: hsl(0, 0%, 93%);
     --greyText: rgb(190, 190, 190);
-    --inputColr: rgba(139, 239, 239, 0.312);
+    --inputColr: rgba(239, 139, 172, 0.28);
     --bodyColor: rgb(240, 240, 249);
     --cardBG: rgb(255, 255, 255);
 }
@@ -68,7 +68,8 @@
         .cardDiv{
             position: relative;
             padding: 2rem 1rem;
-            background: var(--whiteColor);
+            // background: var(--whiteColor);
+            background-color: rgba(240, 248, 255, 0.77);
             border-radius: 10px;
             gap: 1rem;
 
@@ -94,7 +95,8 @@
             .input{
                 height: 40px;
                 padding: 0 1rem;
-                background: var(--inputColr);
+                // background: var(--inputColr) !important;
+                background-color: #4caf9827;
                 border-radius: 3rem;
 
 
@@ -117,7 +119,7 @@
                 }
 
                 .input[type=range]{
-                    background: blue;
+                    background: rgb(10, 127, 150);
                 }
             }
 
@@ -160,6 +162,85 @@
 
                 &:hover{
                     color: var(--primaryColor);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px){
+    .home{
+        .homeContent{
+            .textDiv{
+                .smallText{
+                    font-size: 16px;
+                }
+
+                .homeTitle{
+                    position: relative;
+                    font-size: 2.3rem;
+                    width: max-content;
+
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        bottom: 5px;
+                        height: 5px;
+                        width: 145px;
+                        right: 0;
+                        z-index: -1;
+                        background: var(--secondaryColor);
+                    }
+                }
+            }
+
+            .cardDiv{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 660px){
+    .home{
+        .homeContent{
+            .cardDiv{
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }    
+    }
+}
+
+@media screen and (min-width: 940px){
+    .home{
+        height: 70vh;   
+    }
+}
+
+@media screen and (min-width: 1240px){
+    .home{
+        height: 130vh; 
+        
+        .homeContent{
+            padding-left: 0;
+            padding-right: 0;
+
+            .cardDiv{
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(3,1fr);
+
+                .input{
+                    margin-bottom: 1rem;
+                }
+
+                .searchOptions{
+                    bottom: -1rem;
+                    padding: 8px 1rem;
+
+                    span{
+                        font-size: 17px;
+                    }
                 }
             }
         }
